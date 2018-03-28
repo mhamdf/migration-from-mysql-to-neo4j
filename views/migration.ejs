@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<%-include('templates/head');%>
+<title><%=title%></title>
+
+<body class="nav-md">
+
+
+<%-include('templates/header');%>
+<!-- body -->
+
+
+		<div class="container body">
+
+
+    <div class="main_container">
+
+      <div class="col-md-3 left_col">
+        <div class="left_col scroll-view">
+
+          <div class="navbar nav_title" style="border: 0;">
+            <a href="index" class="site_title"><img src="../public/favicon.ico">  <span>neo4j Manager</span></a>
+          </div>
+          <div class="clearfix"></div>
+
+
+         
+          <br />
+
+          <!-- sidebar menu -->
+          <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+
+            <div class="menu_section">
+              <ul class="nav side-menu">
+                <li><a><i class="fa fa-plus"></i> A PROPOS<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu" style="display: none">
+                    <li><a href="/sgbdr">LES BASE RELATIONNELLES</a>
+                    </li>
+                    <li><a href="/nosql">NOSQL</a>
+                    </li>
+                    <li><a href="/">NEO4J</a>
+                    </li>
+                  </ul>
+                </li>
+
+               <li><a href="migration"><i class="fa fa-database"></i> MIGRATION</a>
+                  
+                </li>
+
+                   
+                    
+                  </ul>
+                </li>
+               
+              </ul>
+            </div>
+          
+
+          </div>
+          <!-- /sidebar menu -->
+
+        </div>
+      </div>
+
+      <!-- top navigation -->
+            <div class="right_col" role="main">
+        <div class="">
+
+          <div class="page-title">
+            <div class="title_left">
+              <h3>Migration</h3>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="x_panel">
+                <div class="x_title">
+                
+                  <h3>Affichage des tables</h3>
+                  
+
+                  <div class="clearfix"></div>
+                </div> 
+
+             <form  action="migrer" method="post" name="resultat" id="formmigration">
+                <div class="x_content">
+                  <br /> 
+                   
+                    
+                      <label class="control-label col-md-3 col-sm-3 col-xs-12">Selectionner une base <span class="required">*</span>
+                      </label>
+                      <div class="col-md-4 col-sm-1 col-xs-12">
+                      <select class="form-control" id="liste" name="lab">
+                        <option >choix de base</option>
+                        <%for(var s=0;s<db.length;s++){%>
+                        <option><%=db[s]%></option>
+                        <%}%>
+                      </select>
+                      </div>
+                    
+                      <input type="button" value="OK" onClick="Okbase();" class="btn btn-success"></input>
+
+
+                    
+                     
+                  <table class="table table-hover ">
+                  
+                      <tbody  id="tabletab">
+
+                      </tbody>
+                      
+                    </table>
+                              
+                   
+                    <div  class="form-group">
+                      <div id="btn" class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                      </div>
+                    </div>
+                  
+                  <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-hidden="true">
+                  <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel2">Ajouter une Relation</h4>
+                      </div>
+                      <div class="modal-body">
+                        <h4>Le nom de la relation entre les noeuds</h4>
+                        <input class="form-control" id="relation" type="text" /> 
+                        <div id="alert" class="alert-warning"></div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                        <button type="button" class="btn btn-primary" action="resultat" id="continue">Sauvgarder et continue</button>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+      </div>
+
+    </div>
+  </div>
+
+
+<!-- FIN body -->
+<%-include('templates/footer');%>
+<%-include('templates/scripts');%>
+</body>
+</html>

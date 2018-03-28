@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<%-include('templates/head');%>
+<title><%=title%></title>
+
+<body class="nav-md">
+
+
+<%-include('templates/header');%>
+<!-- body -->
+
+
+		<div class="container body">
+
+
+    <div class="main_container">
+
+      <div class="col-md-3 left_col">
+        <div class="left_col scroll-view">
+
+          <div class="navbar nav_title" style="border: 0;">
+            <a href="index" class="site_title"><img src="../public/favicon.ico">  <span>neo4j Manager</span></a>
+          </div>
+          <div class="clearfix"></div>
+
+
+         
+          <br />
+
+          <!-- sidebar menu -->
+          <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+
+            <div class="menu_section">
+              <ul class="nav side-menu">
+                <li><a><i class="fa fa-plus"></i> A PROPOS<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu" style="display: none">
+                    <li><a href="sgbdr">LES BASE RELATIONNELLES</a>
+                    </li>
+                    <li><a href="nosql">NOSQL</a>
+                    </li>
+                    <li><a href="/">NEO4J</a>
+                    </li>
+                  </ul>
+                </li>
+
+               <li><a href="migration"><i class="fa fa-database"></i> MIGRATION</a>
+                  
+                </li>
+
+                   
+                    
+                  </ul>
+                </li>
+               
+              </ul>
+            </div>
+          
+
+          </div>
+          <!-- /sidebar menu -->
+
+        </div>
+      </div>
+
+      <!-- top navigation -->
+            <div class="right_col" role="main">
+        <div class="">
+
+         
+          <div class="clearfix"></div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="x_panel">
+                <div class="x_title">
+                
+                  
+                  
+                    <div class="count green"> <h1>Le Résultat</h1></div>
+                  
+                <blockquote>
+                  <code>
+                  Le code source "Cypher"<br>La création des noeuds
+             </code>
+              <pre id="noeud"><%=textN%>
+              </pre>
+              <code>
+                  La création des Relations
+             </code>  
+              <pre id="relation"><%=textR%>
+              </pre>
+              </blockquote> 
+                  
+              <h3>Vous pouver visualiser la base Neo4j sur <code><a href="http://localhost:7474/">NEO4J</a></code> </h3>
+            
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+      </div>
+
+    </div>
+  </div>
+<script type="text/javascript">
+    var permanotice, tooltip, _alert;
+    $(function() {
+      new PNotify({
+        title: "Notification",
+        type: "success",
+        text: "La migration est fait avec success.",
+        nonblock: {
+          nonblock: true
+        },
+        before_close: function(PNotify) {
+          // You can access the notice's options with this. It is read only.
+          //PNotify.options.text;
+
+          // You can change the notice's options after the timer like this:
+          PNotify.update({
+            title: PNotify.options.title + " - Enjoy your Stay",
+            before_close: null
+          });
+          PNotify.queueRemove();
+          return false;
+        }
+      });
+
+    });
+  </script>
+
+<!-- FIN body -->
+<%-include('templates/footer');%>
+<%-include('templates/scripts');%>
+</body>
+</html>

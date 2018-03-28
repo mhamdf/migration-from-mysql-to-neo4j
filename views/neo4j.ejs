@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<%-include('templates/head');%>
+<title><%=title%></title>
+
+<body class="nav-md">
+
+
+<%-include('templates/header');%>
+<!-- body -->
+
+
+		<div class="container body">
+
+
+    <div class="main_container">
+
+      <div class="col-md-3 left_col">
+        <div class="left_col scroll-view">
+
+          <div class="navbar nav_title" style="border: 0;">
+            <a href="index" class="site_title"><img src="../public/favicon.ico">  <span>neo4j Manager</span></a>
+          </div>
+          <div class="clearfix"></div>
+
+
+         
+          <br />
+
+          <!-- sidebar menu -->
+          <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+
+            <div class="menu_section">
+              <ul class="nav side-menu">
+                <li><a><i class="fa fa-plus"></i> A PROPOS<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu" style="display: none">
+                    <li><a href="sgbdr">LES BASE RELATIONNELLES</a>
+                    </li>
+                    <li><a href="nosql">NOSQL</a>
+                    </li>
+                    <li><a href="/">NEO4J</a>
+                    </li>
+                  </ul>
+                </li>
+
+               <li><a href="migration"><i class="fa fa-database"></i> MIGRATION</a>
+                  
+                </li>
+
+                   
+                    
+                  </ul>
+                </li>
+               
+              </ul>
+            </div>
+          
+
+          </div>
+          <!-- /sidebar menu -->
+
+        </div>
+      </div>
+
+      <!-- top navigation -->
+            <div class="right_col" role="main">
+        <div class="">
+
+         
+          <div class="clearfix"></div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="x_panel">
+                <div class="x_title">
+                
+                  <div class="bs-example" data-example-id="simple-jumbotron">
+                  <div class="jumbotron">
+                  <div class="count blue">
+                    <h1>NEO4J  </h1></div>
+                    <blockquote>
+                    <p>Est un système de gestion de base de données au code source libre orienté graphes, développé en Java par la société suédo-américaine Neo technology.</p><p>Neo4j permet de représenter les données en tant qu’objets reliés par un ensemble de relations, chaque objet possédant ses propres propriétés. La base de données de graphes, permet au développeur de commencer directement le codage, les données stockées dans la base assurant un parallélisme direct avec les données elles-mêmes. En d'autres termes, à mesure que l'organisation des données se peaufinera, les programmes suivront au fur et à mesure.</p></blockquote>
+                    <div class="count blue"><h1>Points forts de Neo4j </h1></div>
+                    <blockquote>
+                    <div class="count green">
+                    <h3>Des requêtes haute performance</h3></div>
+
+                      <p>Le modèle de données du graphe permet l’exécution de requêtes complexes avec une haute performance, inhérentes aux données connectées des applications d’aujourd’hui.</p>
+                      <div class="count green">
+                      <h3>Des projets livrés plus rapidement</h3></div>
+                      <p>Modéliser une base de données de graphes est une procédure simple. Les utilisateurs et clients peuvent capturer rapidement toutes sortes de données, structurées, semistructurées et déstructurées et ainsi les stocker dans Neo4j. Pour une application industrielle, par rapport à une approche par base de données relationnelle, les temps de développement sont réduits, ainsi que les coûts de maintenance, tout en profitant de plus hautes performances.</p>
+                      <div class="count green">
+                      <h3>La découverte de nouveaux cas d’usage</h3></div>
+                      <p>Très souvent les utilisateurs et clients de Neo4j démarrent un projet car ils n’ont pas pu trouver de solution à un problème bien précis avec d'autres systèmes de gestion de base de données. Puis ils découvrent, par la simplicité du modèle de données de graphes, de nouveaux cas d’usage très utiles dans le monde des startups ou des industries fortement concurrentielles.</p>
+                      <blockquote>
+                  </div>
+                </div>
+                  
+
+                  <div class="clearfix"></div>
+                </div> 
+
+            
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+      </div>
+
+    </div>
+  </div>
+
+
+<!-- FIN body -->
+<%-include('templates/footer');%>
+<%-include('templates/scripts');%>
+</body>
+</html>

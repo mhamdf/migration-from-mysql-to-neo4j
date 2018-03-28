@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<%-include('templates/head');%>
+<title><%=title%></title>
+
+<body class="nav-md">
+
+
+<%-include('templates/header');%>
+<!-- body -->
+
+
+		<div class="container body">
+
+
+    <div class="main_container">
+
+      <div class="col-md-3 left_col">
+        <div class="left_col scroll-view">
+
+          <div class="navbar nav_title" style="border: 0;">
+            <a href="index" class="site_title"><img src="../public/favicon.ico">  <span>neo4j Manager</span></a>
+          </div>
+          <div class="clearfix"></div>
+
+
+         
+          <br />
+
+          <!-- sidebar menu -->
+          <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+
+            <div class="menu_section">
+              <ul class="nav side-menu">
+                <li><a><i class="fa fa-plus"></i> A PROPOS<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu" style="display: none">
+                    <li><a href="sgbdr">LES BASE RELATIONNELLES</a>
+                    </li>
+                    <li><a href="nosql">NOSQL</a>
+                    </li>
+                    <li><a href="/">NEO4J</a>
+                    </li>
+                  </ul>
+                </li>
+
+               <li><a href="migration"><i class="fa fa-database"></i> MIGRATION</a>
+                  
+                </li>
+
+                   
+                    
+                  </ul>
+                </li>
+               
+              </ul>
+            </div>
+          
+
+          </div>
+          <!-- /sidebar menu -->
+
+        </div>
+      </div>
+
+      <!-- top navigation -->
+            <div class="right_col" role="main">
+        <div class="">
+
+         
+          <div class="clearfix"></div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="x_panel">
+                <div class="x_title">
+                
+                  <div class="bs-example" data-example-id="simple-jumbotron">
+                  <div class="jumbotron">
+                  <div class="count blue">
+                    <h1>NOSQL  </h1></div>
+                    <blockquote>
+                    <p>C'est une combinaison de deux mots : No et SQL. Ce terme semblait vouloir dire « pas de langage SQL pour manipuler les données ». En fait, le « NO » est un acronyme qui signifie « Not only », c'est-à-dire en français, « non seulement » : il signifie donc que les bases de données NoSQL n’ont pas pour but de s’éloigner du langage SQL mais du modèle relationnel.</p>
+                    </blockquote>
+                    
+                    <div class="count blue">
+                    <h1> Caractéristiques du NOSQL </h1></div>
+                    <blockquote>
+                      <p>Les bases de données NOSQL ont apporté un ensemble de solutions afin d'obtenir une meilleure disponibilité des données, avec une performance élevée. Parmi leurs caractéristiques : 
+                      </p>
+                      <p>** Elles Adoptent une représentation de données non relationnelle : Abandonner le principe des tables. 
+                      </p>
+                       <p>** Pas de model prédéfinis. 
+                      </p>
+                       <p> ** Pas de contraintes strictes comme en relationnel. 
+                      </p>
+                       <p> ** Ne remplacent pas les bases de données relationnelles, mais sont une alternative, un complément apportant des solutions plus intéressantes dans certains contextes. 
+                      </p>
+                       <p>** apportent une plus grande performance dans le contexte des applications Web avec des volumétries de données Exponentielle. 
+                      </p>
+                       <p>** Utilisent la « scalabilté » horizontale, dont le principe est d’ajouter des serveurs quand le besoin s’en fait sentir afin de mieux répartir la charge. Cela provoque la réduction des couts relatifs à l’achat du matériel, et la non pénalisation du système quand une panne survient sur le serveur. 
+                      </p>
+                       <p>** Elles sont basées sur le théorème de CAP (Consistency, Availability, Partion-tolerance) qui énonce que tout système distribué peut répondre aux contraintes suivantes :
+                      </p>
+                       <p> -- Cohérence : Tous les utilisateurs du système voient les mêmes données au même instant. 
+                      </p>
+                       <p> -- Availability (Disponibilité) : Un système est dit disponible si toute requête reçue par un nœud retourne un résultat. Bien évidemment le nœud en question ne doit en aucun cas être victime de défaillance. 
+                      </p>
+                       <p> -- Partion-tolerance (Tolérant à la partition) : Un système est dit tolérant à la partition s’il continue à répondre aux requêtes de manière correcte même en cas de panne autre qu’une panne totale du système. 
+                      </p>
+                       <p> Seul deux de ces trois points peuvent être garantis à la fois selon le moteur NoSQL utilisé :   
+  
+                      </p>
+                       <p>*** AP (Disponibilité et tolérant à la partition) 
+                      </p>
+                       <p>*** CP (Cohérence et tolérant à la partition) 
+                      </p>
+                       <p>*** AC (Disponibilité et cohérence) 
+                      </p>
+                     </blockquote>
+                  </div>
+                </div>
+                  
+
+                  <div class="clearfix"></div>
+                </div> 
+
+            
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+      </div>
+
+    </div>
+  </div>
+
+
+<!-- FIN body -->
+<%-include('templates/footer');%>
+<%-include('templates/scripts');%>
+</body>
+</html>

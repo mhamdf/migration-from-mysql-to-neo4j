@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<%-include('templates/head');%>
+<title><%=title%></title>
+
+<body class="nav-md">
+
+
+<%-include('templates/header');%>
+<!-- body -->
+
+
+		<div class="container body">
+
+
+    <div class="main_container">
+
+      <div class="col-md-3 left_col">
+        <div class="left_col scroll-view">
+
+          <div class="navbar nav_title" style="border: 0;">
+            <a href="index" class="site_title"><img src="../public/favicon.ico">  <span>neo4j Manager</span></a>
+          </div>
+          <div class="clearfix"></div>
+
+
+         
+          <br />
+
+          <!-- sidebar menu -->
+          <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+
+            <div class="menu_section">
+              <ul class="nav side-menu">
+                <li><a><i class="fa fa-plus"></i> A PROPOS<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu" style="display: none">
+                    <li><a href="sgbdr">LES BASE RELATIONNELLES</a>
+                    </li>
+                    <li><a href="nosql">NOSQL</a>
+                    </li>
+                    <li><a href="/">NEO4J</a>
+                    </li>
+                  </ul>
+                </li>
+
+               <li><a href="/migration"><i class="fa fa-database"></i> MIGRATION</a>
+                  
+                </li>
+
+                   
+                    
+                  </ul>
+                </li>
+               
+              </ul>
+            </div>
+          
+
+          </div>
+          <!-- /sidebar menu -->
+
+        </div>
+      </div>
+
+      <!-- top navigation -->
+            <div class="right_col" role="main">
+        <div class="">
+
+         
+          <div class="clearfix"></div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="x_panel">
+                <div class="x_title">
+                
+                  <div class="bs-example" data-example-id="simple-jumbotron">
+                  <div class="jumbotron">
+                    <div class="count blue"> <h1>Les bases relationnelles</h1></div>
+                    <blockquote>  
+                    <p class="count">Le modèle des bases relationnelles a été posé par Edgar F. Codd, un ingénieur d'IBM, frustré par les outils de stockage et de manipulation des données dont il disposait. Les bases de données n'offraient pas de séparation entre l'implémentation physique et le modèle logique du stockage, et les utilisateurs devaient avoir une certaine maîtrise informatique pour aller récupérer l'information qu'ils souhaitaient.</p>
+                      <p>Son travail aboutit dans les années 1970 à la définition de l'algèbre relationnelle, première brique dans la construction des bases relationnelles, offrant ainsi une couche d'abstraction entre la persistance physique des données et les modalités de manipulation et de requête reposant sur des modèles logiques.  
+                      </p>
+                      <p>Le modèle relationnel vise en effet à structurer la donnée indépendamment de son utilisation, et l'algèbre définit les opérations qui permettent de reconstruire les relations et de répondre à différentes questions. Elle a abouti à la définition d'un langage standardisé : le SQL (Structured Query Language). </p>
+                      <p>L'algèbre offre de plus un certain nombre d'avantages et de garanties dans la gestion des données et dans l'optimisation du stockage sur le disque. Les bases relationnelles ont également de nombreux atouts pratiques qui en ont fait la solution par défaut pendant de nombreuses années. </p>
+                      <p>Malgré la multiplicité des éditeurs de solutions relationnelles, un modèle et un langage de requêtes assez standards font que les utilisateurs basculent aisément d'un système à un autre. Les quelques différences introduites dans les implémentations, notamment au niveau du langage SQL ne sont pas marquées au point d'être bloquantes pour des experts.</p>
+                      </blockquote>
+                  </div>
+                </div>
+                  
+
+            
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+      </div>
+
+    </div>
+  </div>
+
+
+<!-- FIN body -->
+<%-include('templates/footer');%>
+<%-include('templates/scripts');%>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<%-include('templates/head',{title:'index'});%>
+<body>
+<%-include('templates/header');%>
+<!-- body -->
+  <h1>message</h1>
+  <h2><%=error.status%></h2>
+  <pre>
+  	<%=error.stack%>
+  </pre>
+
+
+<!-- FIN body -->
+<%-include('templates/footer');%>
+<%-include('templates/scripts');%>
+</body>
+</html>
